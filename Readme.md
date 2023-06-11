@@ -2,7 +2,8 @@ SQL Compare - v1
 =====
 
 Auteur : Fabien Cador
-Email : <fabiencador@gmail.com>
+
+Email : fabiencador  (at)  gmail.com
 
 A propos de SQL Compare
 -----
@@ -23,7 +24,21 @@ Bibliothèques utilisées
 Utilisation
 -----
 
-* Ouvrir l'executable.
+Vous pouvez utiliser SQL Compare de 2 façons :
+
+1ère solution - Si vous choisissez d'executer le script non compilé :
+
+* Assurez-vous d'avoir Python d'installer sur votre ordinateur
+* Ouvrez un terminal de console
+* `cd chemin/vers/le/script/`
+* `python sql_compare.py`
+
+2ème solution - Si vous disposez du fichier executable et que vous choisissez de passer par celui-ci :
+
+* Ouvrez sql_compare.exe
+
+Une fois le script lancé :
+
 * La première fenêtre vous demandera de choisir l'emplacement du fichier *.sql source (exemple : bdd locale)
 * Choisir l'emplacement du fichier *.sql de destination (exemple : bdd de production)
 * Choisir l'emplacement où le fichier de différence *.csv s'enregistrera.
@@ -34,3 +49,4 @@ A venir
 
 * Possibilité d'avoir la requête SQL permettant de rétablir les différences dans le fichier *.csv
 * Factorisation des tests effectuées pour obtenir les différences
+* Localisation
