@@ -26,14 +26,14 @@ Utilisation
 
 Vous pouvez utiliser SQL Compare de 2 façons :
 
-1ère solution - Si vous choisissez d'executer le script non compilé :
+*1ère solution* - Si vous choisissez d'executer le script non compilé :
 
 * Assurez-vous d'avoir Python d'installer sur votre ordinateur
 * Ouvrez un terminal de console
 * `cd chemin/vers/le/script/`
 * `python sql_compare.py`
 
-2ème solution - Si vous disposez du fichier executable et que vous choisissez de passer par celui-ci :
+*2ème solution* - Si vous disposez du fichier executable et que vous choisissez de passer par celui-ci :
 
 * Ouvrez sql_compare.exe
 
