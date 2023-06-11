@@ -1,0 +1,6 @@
+re
+os
+csv
+sqlalchemy
+sqlparse-0.4.4
+tkinter

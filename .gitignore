@@ -1,0 +1,46 @@
+# Fichiers et dossiers générés par l'environnement de développement
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyzw
+.DS_Store
+.env
+
+# Fichiers générés par des outils de construction
+/build/
+/dist/
+*.exe
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Fichiers de dépendances et de configuration spécifiques à l'environnement
+/env/
+/venv/
+/.venv/
+/.idea/
+/.vscode/
+
+# Fichiers de sortie et de sauvegarde
+*.log
+*.csv
+*.db
+
+# Dossiers de fichiers statiques générés
+/static/
+
+# Fichiers de configuration personnels
+config.ini
+
+# Fichiers de données sensibles
+credentials.json
+
+# Fichiers de documentation générés
+/docs/_build/
+
+# Fichiers de cache et de sauvegarde
+.cache/
+.backup/
