@@ -101,7 +101,8 @@ def extract_schema(statements):
             if match:
                 table_name = match.group(1)
 
-            # Recherche des champs composant la table
+            # Recherche des champs et param ètres composant la table
+            # TODO séparer les paramètres des champs
             match_columns = re.search(r"\((.+)\)", statement.value, re.DOTALL)
             if match_columns:
                 columns_str = match_columns.group(1)
@@ -111,7 +112,7 @@ def extract_schema(statements):
                     column = column.strip()
 
                     # Exclusion de tokens spécifiques
-                    # TODO exclusion de tout ce qui ne se trouve pas entre simple quotes
+                    # TODO règle d'exclusion si le token ne commence pas par des guillemets typographiques.
                     if re.search(r"(PRIMARY KEY|UNIQUE KEY|KEY|CONSTRAINT)", column):
                         continue
 
@@ -135,7 +136,7 @@ def contains_data(statements):
 
 def choose_save_file_path():
     root = tk.Tk()
-    root.withdraw()  # Cache la fenêtre principale de tkinter
+    root.withdraw()
 
     file_path = filedialog.asksaveasfilename(
         defaultextension='.csv',
@@ -147,7 +148,7 @@ def choose_save_file_path():
 
 def choose_open_file():
     root = tk.Tk()
-    root.withdraw()  # Cache la fenêtre principale de tkinter
+    root.withdraw()
 
     file_path = filedialog.askopenfilename(
         filetypes=[('SQL files', '*.sql')],
