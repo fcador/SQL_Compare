@@ -39,25 +39,16 @@ def main():
 def compare_schemas(schema_a, schema_b):
     differences = []
 
-    # Vérifier les tables existantes dans A mais non présentes dans B
     for table_name in schema_a:
         if table_name not in schema_b:
             differences.append((table_name, "", "", f"La table '{table_name}' existe dans le modèle source mais n'est pas présente dans le modèle de destination."))
-
-    # Vérifier les tables avec des différences de champs entre A et B
-    for table_name in schema_a:
-        if table_name in schema_b:
+        else:
             columns_a = schema_a[table_name]
             columns_b = schema_b[table_name]
 
             if columns_a != columns_b:
+                print(columns_a, columns_b)
                 differences.append((table_name, "", "", f"La table '{table_name}' a des différences de champs entre le modèle source et le modèle de destination."))
-
-    # Vérifier les différences de paramètres de champs entre A et B
-    for table_name in schema_a:
-        if table_name in schema_b:
-            columns_a = schema_a[table_name]
-            columns_b = schema_b[table_name]
 
             for column in columns_a:
                 column_name, params_a = column
@@ -102,7 +93,6 @@ def extract_schema(statements):
                 table_name = match.group(1)
 
             # Recherche des champs et param ètres composant la table
-            # TODO séparer les paramètres des champs
             match_columns = re.search(r"\((.+)\)", statement.value, re.DOTALL)
             if match_columns:
                 columns_str = match_columns.group(1)
@@ -112,7 +102,6 @@ def extract_schema(statements):
                     column = column.strip()
 
                     # Exclusion de tokens spécifiques
-                    # TODO règle d'exclusion si le token ne commence pas par des guillemets typographiques.
                     if re.search(r"(PRIMARY KEY|UNIQUE KEY|KEY|CONSTRAINT)", column):
                         continue
 
