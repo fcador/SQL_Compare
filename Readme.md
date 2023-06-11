@@ -1,52 +1,56 @@
-SQL Compare - v1
-=====
+# SQL Compare - v1
+==================
 
 Auteur : Fabien Cador
 
-Email : fabiencador  (at)  gmail.com
+Email : fabiencador (at) gmail.com
 
-A propos de SQL Compare
------
+Sommaire
+--------
 
-SQL Compare est un projet né de 2 besoins:
+- [A propos de SQL Compare](#a-propos-de-sql-compare)
+- [Bibliothèques utilisées](#bibliotheques-utilisees)
+- [Utilisation](#utilisation)
+- [A venir](#a-venir)
 
-* Celui de régulièrement avoir à comparer, sur un projet, un schéma de base de données local à celui en production.
-* Et de celui de mettre en pratique des notions de Python fraichement acquises
+## A propos de SQL Compare
 
-Ce script permet de faire une comparaison basique de 2 bases de données et de reporter les différences entre une base A (par exemple locale et comprenant de potentiels nouveaux champs) et une base B (par exemple en production)
+SQL Compare est un projet né de 2 besoins :
 
-Bibliothèques utilisées
------
+- Celui de comparer régulièrement, sur un projet, un schéma de base de données local à celui en production.
+- Et celui de mettre en pratique des notions de Python fraîchement acquises.
 
-* sqlparse-0.4.4
-* tkinter
+Ce script permet de faire une comparaison basique de 2 bases de données et de rapporter les différences entre une base A (par exemple locale et comprenant de potentiels nouveaux champs) et une base B (par exemple en production).
 
-Utilisation
------
+## Bibliothèques utilisées
+
+- sqlparse-0.4.4
+- tkinter
+
+## Utilisation
 
 Vous pouvez utiliser SQL Compare de 2 façons :
 
-*1ère solution* - Si vous choisissez d'executer le script non compilé :
+**1ère solution** - Si vous choisissez d'exécuter le script non compilé :
 
-* Assurez-vous d'avoir Python d'installer sur votre ordinateur
-* Ouvrez un terminal de console
-* `cd chemin/vers/le/script/`
-* `python sql_compare.py`
+- Ouvrez une fenêtre d'invite de commande.
+- Assurez-vous d'avoir Python installé sur votre ordinateur en exécutant `python --version`.
+- Accédez au script `cd chemin/vers/le/script/`.
+- Exécutez le script `python sql_compare.py`.
 
-*2ème solution* - Si vous disposez du fichier executable et que vous choisissez de passer par celui-ci :
+**2ème solution** - Si vous disposez du fichier exécutable et que vous choisissez de passer par celui-ci :
 
-* Ouvrez sql_compare.exe
+- Exécutez sql_compare.exe.
 
 Une fois le script lancé :
 
-* La première fenêtre vous demandera de choisir l'emplacement du fichier *.sql source (exemple : bdd locale)
-* Choisir l'emplacement du fichier *.sql de destination (exemple : bdd de production)
-* Choisir l'emplacement où le fichier de différence *.csv s'enregistrera.
-* Consulter les différences dans le fichier *.csv
+- La première fenêtre vous demandera de choisir l'emplacement du fichier *.sql source (exemple : bdd locale).
+- Choisissez l'emplacement du fichier *.sql de destination (exemple : bdd de production).
+- Choisissez l'emplacement où le fichier de différence *.csv sera enregistré.
+- Consultez les différences dans le fichier *.csv.
 
-A venir
------
+## A venir
 
-* Possibilité d'avoir la requête SQL permettant de rétablir les différences dans le fichier *.csv
-* Factorisation des tests effectuées pour obtenir les différences
-* Localisation
+- Possibilité d'avoir la requête SQL permettant de rétablir les différences dans le fichier *.csv.
+- Factorisation des tests effectués pour obtenir les différences.
+- Localisation.
