@@ -52,5 +52,4 @@ Une fois le script lancé :
 ## A venir
 
 - Possibilité d'avoir la requête SQL permettant de rétablir les différences dans le fichier *.csv.
-- Factorisation des tests effectués pour obtenir les différences.
 - Localisation.
